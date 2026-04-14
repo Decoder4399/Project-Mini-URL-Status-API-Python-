@@ -24,14 +24,14 @@ jobs:
               run: |
                 python app.py &
                 sleep 5
-                curl http://localhost:5000
+                curl http://localhost:5001
 
             - name: build docker image
               run: docker build -t url-status-api-app .
 
             - name: run docker container
               run: |
-                docker run -d -p 5000:5000 --name url-status-api-container url-status-api-app
+                docker run -d -p 5001:5000 --name url-status-api-container url-status-api-app
                 sleep 5
-                curl http://localhost:5000
+                curl http://localhost:5001
 
