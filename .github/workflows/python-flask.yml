@@ -1,8 +1,6 @@
 name: python-flask-app-CI
 
 on:
-    push:
-        branches: [ main ]
     workflow_dispatch:
 
 jobs:
