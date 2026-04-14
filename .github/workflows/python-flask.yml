@@ -24,7 +24,7 @@ jobs:
               run: |
                 python app.py &
                 sleep 5
-                curl http://localhost:5001
+                curl http://localhost:5000
 
             - name: build docker image
               run: docker build -t url-status-api-app .
